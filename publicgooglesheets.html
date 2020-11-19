@@ -1,0 +1,38 @@
+
+<script type="text/x-red" data-template-name="publicgooglesheets">
+    <div class="form-row">
+        <label for="node-input-spreadsheetId"><i class="fa fa-key"></i> spreadsheetId </label>
+        <input type="text" id="node-input-spreadsheetId" placeholder="spreadsheetId">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="publicgooglesheets">
+   <p>Request <b>msg.payload.spreadsheetId</b> </p>
+   <p>Simple way to get to publicgooglesheets API.</p>
+   <p><a href="https://www.npmjs.com/package/public-google-sheets-parser" target="_new">ref this</a></p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('publicgooglesheets',{
+        category: 'function',
+        defaults: {
+            spreadsheetId: {value:"", required:false}
+        },
+        // credentials: {
+        //     spreadsheetId: {type: "password"}
+        // },
+        color:"#0a9e58",
+        icon: "publicgooglesheets.png",
+        align: "left",
+        inputs:1,
+        outputs:1,
+        label: function() {
+            return this.name||"publicgooglesheets";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+
+</script>
