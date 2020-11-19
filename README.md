@@ -3,7 +3,7 @@ node-red-contrib-publicgooglesheets
 
 <a href="http://nodered.org" target="_new">Node-RED</a> 
 
-<a href="https://publicgooglesheets.io/help/user-guide/integrations-and-api/api" target="_new">public-google-sheets-parser wrapper</a>.
+<a href="https://www.npmjs.com/package/public-google-sheets-parser" target="_new">public-google-sheets-parser wrapper</a>.
 
 Install
 -------
@@ -17,7 +17,7 @@ Usage
 -----
 
 ## publicgooglesheets  
-<i><a href="https://publicgooglesheets.io/help/user-guide/integrations-and-api/api" target="_new">publicgooglesheets</a></i> api request node.
+<i><a href="https://www.npmjs.com/package/public-google-sheets-parser" target="_new">publicgooglesheets</a></i> api request node.
 
 It is a simple parser that helps you use public Google sheets document as if they were a database.
 
