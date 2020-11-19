@@ -34,14 +34,9 @@ If you have a public spreadsheet document, and the first row is a header and you
 ### spreadsheetId 
 - need only public spreadsheet ID 
 
-## parameter example
-```javascript
-
-```
-
 ## sample flow
 
 ```json
-
+[{"id":"5287f509.66249c","type":"inject","z":"27616db5.40b352","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":230,"y":100,"wires":[["e36bf6e2.633f58"]]},{"id":"e36bf6e2.633f58","type":"publicgooglesheets","z":"27616db5.40b352","spreadsheetId":"10WDbAPAY7Xl5DT36VuMheTPTTpqx9x0C5sDCnh4BGps","x":470,"y":100,"wires":[["a499660e.12d2e8"]]},{"id":"a499660e.12d2e8","type":"debug","z":"27616db5.40b352","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":720,"y":100,"wires":[]}]
 
 ```
