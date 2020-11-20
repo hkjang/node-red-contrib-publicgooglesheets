@@ -1,4 +1,4 @@
-var PublicGoogleSheetsParser = require('public-google-sheets-parser');
+var PublicGoogleSheetsParser = require('public-google-sheets');
 
 module.exports = function(RED) {
     "use strict";
