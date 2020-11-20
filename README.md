@@ -3,7 +3,7 @@ node-red-contrib-publicgooglesheets
 
 <a href="http://nodered.org" target="_new">Node-RED</a> 
 
-<a href="https://www.npmjs.com/package/public-google-sheets-parser" target="_new">public-google-sheets-parser wrapper</a>.
+<a href="https://www.npmjs.com/package/public-google-sheets" target="_new">public-google-sheets-parser wrapper</a>.
 
 Install
 -------
@@ -17,7 +17,7 @@ Usage
 -----
 
 ## publicgooglesheets  
-<i><a href="https://www.npmjs.com/package/public-google-sheets-parser" target="_new">publicgooglesheets</a></i> api request node.
+<i><a href="https://www.npmjs.com/package/public-google-sheets" target="_new">publicgooglesheets</a></i> api request node.
 
 It is a simple parser that helps you use public Google sheets document as if they were a database.
 
@@ -37,6 +37,26 @@ If you have a public spreadsheet document, and the first row is a header and you
 ## sample flow
 
 ```json
-[{"id":"5287f509.66249c","type":"inject","z":"27616db5.40b352","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":230,"y":100,"wires":[["e36bf6e2.633f58"]]},{"id":"e36bf6e2.633f58","type":"publicgooglesheets","z":"27616db5.40b352","spreadsheetId":"10WDbAPAY7Xl5DT36VuMheTPTTpqx9x0C5sDCnh4BGps","x":470,"y":100,"wires":[["a499660e.12d2e8"]]},{"id":"a499660e.12d2e8","type":"debug","z":"27616db5.40b352","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":720,"y":100,"wires":[]}]
+[{"id":"5287f509.66249c","type":"inject","z":"27616db5.40b352","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":360,"y":40,"wires":[["e36bf6e2.633f58"]]},{"id":"e36bf6e2.633f58","type":"publicgooglesheets","z":"27616db5.40b352","spreadsheetId":"","x":610,"y":40,"wires":[["a499660e.12d2e8","3a9e7400.38055c"]]},{"id":"a499660e.12d2e8","type":"debug","z":"27616db5.40b352","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":830,"y":40,"wires":[]},{"id":"82807216.1063c","type":"http in","z":"27616db5.40b352","name":"","url":"/googlesheets","method":"get","upload":false,"swaggerDoc":"","x":150,"y":100,"wires":[["e7300abe.757e98"]]},{"id":"3a9e7400.38055c","type":"http response","z":"27616db5.40b352","name":"","statusCode":"","headers":{},"x":810,"y":100,"wires":[]},{"id":"e7300abe.757e98","type":"function","z":"27616db5.40b352","name":"set spreadsheetId param","func":"// sample public google sheets id\n// 10WDbAPAY7Xl5DT36VuMheTPTTpqx9x0C5sDCnh4BGps\n\nmsg.spreadsheetId = msg.payload.id;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","x":390,"y":100,"wires":[["e36bf6e2.633f58"]]}]
+```
 
+## result 
+```json
+[
+    {
+        "a": 1,
+        "b": 2,
+        "c": 3
+    },
+    {
+        "a": 4,
+        "b": 5,
+        "c": 6
+    },
+    {
+        "a": 7,
+        "b": 8,
+        "c": 9
+    }
+]
 ```
